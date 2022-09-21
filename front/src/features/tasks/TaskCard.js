@@ -1,10 +1,17 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { finishTask, select, selectTasksSelected, unSelect } from "./tasksSlice";
+import TimeAgo from "javascript-time-ago";
+
+
+import fr from "javascript-time-ago/locale/fr";
 
 const TaskCard = ({ taskData }) => {
 	const { id, title, date, description, author, finish } = taskData;
 	const dispatch = useDispatch();
+
+	TimeAgo.addDefaultLocale(fr);
+	const timeAgo = new TimeAgo('fr-FR')
 
 	const tasksSelected = useSelector(selectTasksSelected);
 
@@ -15,7 +22,7 @@ const TaskCard = ({ taskData }) => {
 		<div className="card" data-selected={tasksSelected.includes(id)} onClick={cardClick}>
 			<div className="card-header">
 				<h3>{title}</h3>
-				<span>{date}</span>
+				<h4>{timeAgo.format(parseInt(date))}</h4>
 			</div>
 			<div className="card-body">
 				<p>{description}</p>

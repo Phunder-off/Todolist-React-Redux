@@ -66,8 +66,7 @@ export const tasksSlice = createSlice({
 				state.status.state = "loading";
 			})
 			.addMatcher(isRejected, (state) => {
-				state.status.message = "Echec de la recuperation des données";
-				state.status.state = "failed";
+				state.status = { state: "failed", message: "Echec de la recuperation des données" };
 			});
 	},
 });

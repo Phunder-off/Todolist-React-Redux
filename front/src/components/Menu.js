@@ -20,9 +20,9 @@ const Menu = () => {
 	const actionReloadTask = () => dispatch(fetchTasks());
 	const actionDeleteTask = () => tasksSelected.map((tasksId) => dispatch(deleteTask(tasksId)));
 
-	const actionNewTask = () => setPopup(<Popup component={<FormTask setPopup={setPopup} />} update={false} />);
 	const actionUpdateTask = () => tasksSelected.length > 0 && setPopup(<Popup component={<FormTask task={tasks.find((task) => task.id === tasksSelected[0])} setPopup={setPopup} update={true} />} />);
-
+	
+	const actionNewTask = () => setPopup(<Popup component={<FormTask setPopup={setPopup} />} update={false} />);
 	const actionFilterTask = () => setPopup(<Popup component={<FormFilterTask setPopup={setPopup} />} />);
 
 	return (

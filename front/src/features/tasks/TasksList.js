@@ -16,7 +16,7 @@ const TasksList = () => {
 
 	return (
 		<div id="tasks-list">
-			{tasksStatus.state === "loading" && <Popup component={<Loader />} />}
+			{tasksStatus.state === "loading" && <Popup component={<Message title={<Loader />} message="Chargement..." />} />}
 			{tasksStatus.state === "failed" && <Popup component={<Message title="Erreur" message={tasksStatus.message} />} />}
 
 			{tasks

@@ -97,6 +97,43 @@ body {
   }
 }
 
+.input-label {
+  padding: 5px;
+  width: 100%;
+}
+.input-label * {
+  width: 100%;
+}
+.input-label label {
+  position: relative;
+  transition: top 0.5s;
+  top: 1rem;
+  color: gray;
+}
+.input-label input {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #3b6bfb;
+  display: block;
+  width: calc(100% - 3px - 5px);
+}
+.input-label:has(input:not(:placeholder-shown)) label {
+  top: 0;
+}
+.input-label:has(input:focus-visible) > label {
+  top: 0;
+}
+.input-label:has(input:focus-visible) > input {
+  outline: none;
+  border-bottom: solid 3px #3b6bfb;
+}
+
+.radio_group {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+}
+
 main {
   display: flex;
 }

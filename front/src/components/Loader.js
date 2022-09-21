@@ -1,10 +1,9 @@
 import React from "react";
 
-const Loader = ({ message = "Chargement..." }) => {
+const Loader = () => {
 	return (
 		<div id="loader">
-			<span className="loading"></span>
-			<p>{message}</p>
+			<span className="loading">.-.</span>
 		</div>
 	);
 };
