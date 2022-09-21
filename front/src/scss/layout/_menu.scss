@@ -1,0 +1,17 @@
+#menu {
+    background: $secondary-color;
+    width: 20%;
+
+    > button {
+        width: 100%;
+        height: 4rem;
+        border: none;
+        font-size: large;
+
+        &:hover{
+            background: $primary-color;
+            color: white;
+
+        }
+    }
+}

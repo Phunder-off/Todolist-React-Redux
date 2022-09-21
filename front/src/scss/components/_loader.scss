@@ -1,0 +1,31 @@
+#loader {
+	text-align: center;
+	* {
+		width: 100%;
+	}
+
+	.loading {
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+
+		$border: solid 2px white;
+
+		border-top: $border;
+		border-bottom: $border;
+		border-left: $border;
+
+		animation: rotation 1s infinite linear;
+
+		border-radius: 50px;
+	}
+
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(359deg);
+		}
+	}
+}

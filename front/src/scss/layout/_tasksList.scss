@@ -1,0 +1,17 @@
+#tasks-list {
+	width: 80%;
+
+	height: calc(100vh - 60px);
+
+	overflow: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: space-around;
+	align-content: flex-start;
+
+	.card {
+		width: 30%;
+	}
+}
