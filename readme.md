@@ -7,7 +7,7 @@
 ## L'utilisation
 
 - Lancer le fichier `start.bat` pour tester le projet.
-- Lancer le fichier `install dependencies.bat` pour installer les dépendances.
+- Lancer le fichier `install dependencies.bat` pour installer les dépendances (npm).
 
 ### Les ports
 
