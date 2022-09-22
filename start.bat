@@ -1,11 +1,7 @@
-@echo off
-
-
-
-cd front/build
-start index.html
-cd ../../
-
-
 cd back
-json-server --watch db.json --delay 500
+
+start cmd /C json-server --watch db.json
+
+cd ../front
+npm start
+pause
